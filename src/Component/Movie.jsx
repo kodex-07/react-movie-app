@@ -14,7 +14,7 @@ function Movie({ movie, onAddMovie }) {
         </div>
       ) : (
         <img
-          src={movie.Poster}
+          src={movie.Poster?.replace(/^http:/i, "https:")}
           alt={`${movie.Title} poster`}
           onError={() => setPosterError(true)}
         />

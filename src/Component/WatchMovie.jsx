@@ -13,7 +13,7 @@ function WatchedMovie({ movie, onDeleteWatched }) {
         </div>
       ) : (
         <img
-          src={movie.poster}
+          src={movie.poster?.replace(/^http:/i, "https:")}
           alt={`${movie.title} poster`}
           onError={() => setPosterError(true)}
         />

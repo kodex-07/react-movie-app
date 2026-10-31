@@ -77,7 +77,10 @@ function MovieDetails({ selectedId, KEY, watched, onCloseMovie, onAddWatch }) {
             &larr;
           </button>
           <button>
-            <img src={poster} alt={`poster of the ${movie}`} />
+            <img
+              src={poster?.replace(/^http:/i, "https:")}
+              alt={`poster of the ${movie}`}
+            />
             <div className="details-overview">
               <h2>{title}</h2>
               <p>
